@@ -1,0 +1,95 @@
+.heroWrapper {
+  position: relative;
+  padding: 0;
+  background-color: var(--bg-primary);
+  padding-bottom: 0;
+}
+
+/* Faixa de imagem de fundo */
+.backgroundStrip {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.backgroundStrip::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0) 0%,
+    rgba(26, 26, 26, 0.5) 40%,
+    rgba(26, 26, 26, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.backgroundStrip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Card flutuante - SEM BLUR */
+.card {
+  position: relative;
+  background: #0d0d0d;
+  border-radius: 20px;
+  padding: 2.5rem 1.5rem 1.75rem;
+  text-align: center;
+  margin: -80px 1.25rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Logo do restaurante */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.details {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+
+.menuButton {
+  background: var(--accent-orange);
+  color: white;
+  border: none;
+  padding: 1.1rem 3.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 16px rgba(255, 99, 71, 0.35);
+}
+
+.menuButton:active {
+  background: var(--accent-orange-hover);
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.4);
+}
