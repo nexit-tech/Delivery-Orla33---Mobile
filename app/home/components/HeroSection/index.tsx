@@ -22,7 +22,6 @@ export default function HeroSection() {
         <p className={styles.details}>
           Open • 15-20 min delivery • Min order R$ 80,00
         </p>
-        <button className={styles.menuButton}>View Menu</button>
       </div>
     </section>
   )
