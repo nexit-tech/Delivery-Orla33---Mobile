@@ -1,14 +1,15 @@
 .heroWrapper {
   position: relative;
   padding: 0;
-  background-color: var(--bg-primary);
+  /* Garante que o fundo também mude com o tema */
+  background-color: var(--background-primary); 
   padding-bottom: 0;
 }
 
-/* Faixa de imagem de fundo - MAIS BAIXA */
+/* Faixa de imagem de fundo */
 .backgroundStrip {
   width: 100%;
-  height: 200px; /* Aumentado de 180px para 200px */
+  height: 200px;
   overflow: hidden;
   position: relative;
 }
@@ -19,12 +20,13 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 140px; /* Aumentado de 120px para 140px */
+  height: 140px;
+  /* O gradiente agora vai do transparente para a cor de fundo primária do tema */
   background: linear-gradient(
     to bottom,
     rgba(26, 26, 26, 0) 0%,
     rgba(26, 26, 26, 0.5) 40%,
-    rgba(26, 26, 26, 1) 100%
+    var(--background-primary) 100%
   );
   pointer-events: none;
 }
@@ -33,31 +35,34 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%; /* Ajustado para mostrar mais a parte inferior da imagem */
+  object-position: center 30%;
   display: block;
 }
 
-/* Card flutuante - MAIS ALTO */
+/* Card flutuante */
 .card {
   position: relative;
-  background: #0d0d0d;
+  /* CORRIGIDO: Usa a cor de fundo secundária do tema */
+  background: var(--background-secondary); 
   border-radius: 20px;
-  padding: 2rem 1.5rem 1.5rem; /* Reduzido padding bottom de 1.75rem para 1.5rem */
+  padding: 2rem 1.5rem 1.5rem;
   text-align: center;
-  margin: -150px 1.25rem 0; /* Mudado de -80px para -110px (mais alto) */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  margin: -150px 1.25rem 0;
+  /* CORRIGIDO: Usa a cor de sombra do tema */
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: background-color 0.3s ease;
 }
 
 /* Logo do restaurante */
 .logoContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.25rem; /* Reduzido de 1.5rem para 1.25rem */
+  margin-bottom: 1.25rem;
 }
 
 .logo {
-  width: 140px; /* Reduzido de 150px para 140px */
-  height: 140px; /* Reduzido de 150px para 140px */
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
 }
@@ -70,7 +75,8 @@
 }
 
 .details {
-  color: var(--text-secondary);
+  /* CORRIGIDO: Usa a cor de texto secundária do tema */
+  color: var(--text-secondary); 
   font-size: 0.9rem;
-  margin-bottom: 0; /* Removido margin-bottom já que não há mais botão */
+  margin-bottom: 0;
 }

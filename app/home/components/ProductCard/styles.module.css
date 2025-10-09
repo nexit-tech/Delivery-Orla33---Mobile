@@ -1,5 +1,5 @@
 .card {
-  background: #0d0d0d;
+  background: var(--background-secondary);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -58,13 +58,13 @@
 }
 
 .price {
-  color: var(--accent-orange);
+  color: var(--accent-color);
   font-size: 1.25rem;
   font-weight: bold;
 }
 
 .addButton {
-  background: var(--accent-orange);
+  background: var(--accent-color);
   border: none;
   border-radius: 50%;
   width: 45px;
@@ -80,6 +80,6 @@
 }
 
 .addButton:active {
-  background: var(--accent-orange-hover);
+  background: var(--accent-color-hover);
   transform: scale(0.95);
 }
